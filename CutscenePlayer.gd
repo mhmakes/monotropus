@@ -10,4 +10,5 @@ func _ready() -> void:
 	play("cutscene_Test")
 	
 	_dialogue_box.set_cutscene_player(self)
+	_choice_box.set_cutscene_player(self)
 

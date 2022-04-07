@@ -1,8 +1,10 @@
-[gd_resource type="Animation" format=2]
+[gd_resource type="Animation" load_steps=2 format=2]
+
+[ext_resource path="res://Story/Data/Choices/choice_Test.tres" type="Resource" id=1]
 
 [resource]
 resource_name = "cutscene_Test"
-length = 2.0
+length = 2.1
 tracks/0/type = "method"
 tracks/0/path = NodePath("CutscenePlayer")
 tracks/0/interp = 1
@@ -24,7 +26,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 168, 80 ), Vector2( 232, 80 ), Vector2( 264, 80 ) ]
+"values": [ Vector2( 168, 80 ), Vector2( 232, 80 ), Vector2( 128, 64 ) ]
 }
 tracks/2/type = "method"
 tracks/2/path = NodePath("UI/DialogueBox")
@@ -38,5 +40,19 @@ tracks/2/keys = {
 "values": [ {
 "args": [ "res://Story/Data/Text/text_FrontDoor_FrontDoorKey_FirstTry.csv" ],
 "method": "start_dialogue"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("UI/ChoiceBox")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ ExtResource( 1 ) ],
+"method": "start_choice"
 } ]
 }

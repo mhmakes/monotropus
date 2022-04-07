@@ -21,8 +21,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		OS.set_window_fullscreen(!OS.is_window_fullscreen())
 
 
-# We don't modify story_flags directly; instead, this function has some input validation for us
-# so that our chances of awful bugs are 1% less
 func update_story_flags(flags: Dictionary) -> void:
 	var keys: Array = flags.keys()
 	
