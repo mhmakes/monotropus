@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://UI/ChoiceBox/ChoiceButtons.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+label = "What will you do?"
+choices = [ {
+"button_label": "Try talking",
+"story_flags": {
+"": false
+}
+}, {
+"button_label": "Remain quiet",
+"story_flags": {
+"": false
+}
+} ]

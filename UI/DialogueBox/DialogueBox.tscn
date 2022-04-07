@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI/TextBlip.wav" type="AudioStream" id=1]
+[ext_resource path="res://UI/DialogueBox/DialogueBox.gd" type="Script" id=2]
+[ext_resource path="res://UI/UITheme.tres" type="Theme" id=4]
+[ext_resource path="res://UI/Fonts/font_orange_kid.tres" type="DynamicFont" id=5]
+
+[sub_resource type="Animation" id=2]
+resource_name = "draw_text"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Text:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+
+[node name="DialogueBox" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = 112.0
+margin_right = -32.0
+margin_bottom = -9.0
+theme = ExtResource( 4 )
+script = ExtResource( 2 )
+_dialogue_text = NodePath("Text")
+_dialogue_speaker = NodePath("SpeakerLabel")
+_animation_player = NodePath("AnimationPlayer")
+_text_blip = NodePath("TextBlip")
+
+[node name="Text" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 3.0
+margin_right = -8.0
+margin_bottom = -2.0
+theme = ExtResource( 4 )
+custom_fonts/normal_font = ExtResource( 5 )
+bbcode_enabled = true
+bbcode_text = "Placeholder Text''''''
+
+"
+visible_characters = 116
+percent_visible = 6.82353
+text = "Placeholder Text''''''
+
+"
+
+[node name="SpeakerLabel" type="Label" parent="."]
+margin_top = -16.0
+margin_right = 65.0
+margin_bottom = 11.0
+custom_fonts/font = ExtResource( 5 )
+text = "Speaker"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/draw_text = SubResource( 2 )
+
+[node name="TextBlip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )

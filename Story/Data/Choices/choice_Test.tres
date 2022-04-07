@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://UI/ChoiceBox/ChoiceButtons.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+label = "Button Label"
+choices = [ {
+"button_label": "Change existing value",
+"story_flags": {
+"existing_flag": true
+}
+}, {
+"button_label": "Change fake value",
+"story_flags": {
+"false_flag": true
+}
+} ]

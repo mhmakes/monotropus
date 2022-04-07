@@ -1,0 +1,170 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://UI/DialogueBox/DialogueBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/ChoiceBox/ChoiceBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Story/Data/Choices/choice_Test.tres" type="Resource" id=3]
+[ext_resource path="res://CutscenePlayer.gd" type="Script" id=4]
+[ext_resource path="res://Player/Emily.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Story/Data/Cutscenes/cutscene_Test.tres" type="Animation" id=7]
+[ext_resource path="res://Levels/test_tileset.png" type="Texture" id=8]
+
+[sub_resource type="TileSet" id=2]
+6/name = "test_tileset.png 6"
+6/texture = ExtResource( 8 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 112, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "test_tileset.png 7"
+7/texture = ExtResource( 8 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 128, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "test_tileset.png 8"
+8/texture = ExtResource( 8 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 80, 144, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "test_tileset.png 9"
+9/texture = ExtResource( 8 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 80, 160, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "test_tileset.png 10"
+10/texture = ExtResource( 8 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 16, 0, 16, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "test_tileset.png 11"
+11/texture = ExtResource( 8 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 16, 16, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "test_tileset.png 12"
+12/texture = ExtResource( 8 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 16, 128, 48, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "test_tileset.png 13"
+13/texture = ExtResource( 8 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 16, 112, 48, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Emily:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 168, 80 ) ]
+}
+
+[node name="TestScene" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.501961, 0.717647, 0.862745, 1 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 10, 0, 1, 10, 0, 2, 10, 0, 3, 10, 0, 4, 10, 0, 5, 10, 0, 6, 10, 0, 7, 10, 0, 8, 10, 0, 9, 10, 0, 10, 10, 0, 11, 10, 0, 12, 10, 0, 13, 10, 0, 14, 10, 0, 15, 10, 0, 16, 10, 0, 17, 10, 0, 18, 10, 0, 19, 10, 0, 20, 10, 0, 131072, 12, 0, 131075, 12, 0, 131078, 12, 0, 131081, 12, 0, 131084, 12, 0, 131087, 12, 0, 131090, 12, 0, 196608, 12, 0, 196611, 12, 0, 196614, 12, 0, 196617, 12, 0, 196620, 12, 0, 196623, 12, 0, 196626, 12, 0, 262144, 12, 0, 262147, 12, 0, 262150, 12, 0, 262153, 12, 0, 262156, 12, 0, 262159, 12, 0, 262162, 12, 0, 327680, 12, 0, 327683, 12, 0, 327686, 12, 0, 327689, 12, 0, 327692, 12, 0, 327695, 12, 0, 327698, 12, 0, 393216, 12, 0, 393219, 12, 0, 393222, 12, 0, 393225, 12, 0, 393228, 12, 0, 393231, 12, 0, 393234, 12, 0, 458752, 12, 0, 458755, 12, 0, 458758, 12, 0, 458761, 12, 0, 458764, 12, 0, 458767, 12, 0, 458770, 12, 0, 524288, 12, 0, 524291, 12, 0, 524294, 12, 0, 524297, 12, 0, 524300, 12, 0, 524303, 12, 0, 524306, 12, 0, 589824, 12, 0, 589827, 12, 0, 589830, 12, 0, 589833, 12, 0, 589836, 12, 0, 589839, 12, 0, 589842, 12, 0, 655360, 12, 0, 655363, 12, 0, 655366, 12, 0, 655369, 12, 0, 655372, 12, 0, 655375, 12, 0, 655378, 12, 0, 720896, 12, 0, 720899, 12, 0, 720902, 12, 0, 720905, 12, 0, 720908, 12, 0, 720911, 12, 0, 720914, 12, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CutscenePlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/cutscene_Test = ExtResource( 7 )
+script = ExtResource( 4 )
+_dialogue_box = NodePath("../UI/DialogueBox")
+_choice_box = NodePath("../UI/ChoiceBox")
+
+[node name="Emily" parent="." instance=ExtResource( 5 )]
+position = Vector2( 168, 80 )
+
+[node name="UI" type="Control" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+
+[node name="DialogueBox" parent="UI" instance=ExtResource( 1 )]
+
+[node name="ChoiceBox" parent="UI" instance=ExtResource( 2 )]
+visible = false
+_choice_buttons_data = ExtResource( 3 )
